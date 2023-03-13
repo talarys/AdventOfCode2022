@@ -5,8 +5,7 @@
 | ---------------------------------- | ------ | -------------------------- |
 | 🎄 Day 1: Calorie Counting          | ⭐⭐     | [Day1.py](/python/day1.py) |
 | 🎄 Day 2: Rock Paper Scissors       | ⭐⭐     | [Day2.py](/python/day2.py) |
-| 🎄 Day x:                           |        | [Dayx.py](/python/dayx.py) |
-| 🎄 Day 3: Rucksack Reorganization   |
+| 🎄 Day 3: Rucksack Reorganization   |        | [Dayx.py](/python/dayx.py) |
 | 🎄 Day 4: Camp Cleanup              |
 | 🎄 Day 5: Supply Stacks             |
 | 🎄 Day 6: Tuning Trouble            |
