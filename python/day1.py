@@ -1,30 +1,22 @@
 input = open("../inputs/day1.txt").readlines()
 
+n, Elves = 1, [0]
 
-def parse(lines):
-    sums = []
-    acc = 0
-    for line in lines:
-        line = line.strip()
-        if line:
-            acc += int(line)
-        else:
-            sums.append(acc)
-            acc = 0
-    if acc:
-        sums.append(acc)
-    return sums
+for line in map(lambda x: x.strip(), input):
+    if line:
+        Elves[n - 1] += int(line)
+    else:
+        n, Elves = n + 1, Elves + [0]
 
 
 def part1():
-    return max(parse(input))
+    return max(Elves)
 
 
 def part2():
-    return sum(sorted(parse(input))[-3:])
+    return sum(sorted(Elves)[-3:])
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(part1())
     print(part2())
