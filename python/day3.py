@@ -1,6 +1,6 @@
-lines = open("../inputs/day3.txt").read().strip().split("\n")
-
 from more_itertools import grouper
+
+lines = open("../inputs/day3.txt").read().strip().split("\n")
 
 
 def score(c):
