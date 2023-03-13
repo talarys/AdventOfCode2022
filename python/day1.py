@@ -16,13 +16,15 @@ def parse(lines):
     return sums
 
 
-def part1(lines):
-    return max(parse(lines))
+def part1():
+    return max(parse(input))
 
 
-def part2(lines):
-    return sum(sorted(parse(lines))[-3:])
+def part2():
+    return sum(sorted(parse(input))[-3:])
 
 
-print(part1(input))
-print(part2(input))
+
+if __name__ == '__main__':
+    print(part1())
+    print(part2())
