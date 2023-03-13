@@ -9,7 +9,7 @@
 | 🎄 Day 4: Camp Cleanup              | ⭐⭐     | [Day4.py](/python/day4.py)   |
 | 🎄 Day 5: Supply Stacks             | ⭐⭐     | [Day5.py](/python/day5.py)   |
 | 🎄 Day 6: Tuning Trouble            | ⭐⭐     | [Day6.py](/python/day6.py)   |
-| 🎄 Day 7: No Space Left On Devic    | ⭐⭐     | [Day7.py](/python/day7.py)   |
+| 🎄 Day 7: No Space Left On Device   | ⭐⭐     | [Day7.py](/python/day7.py)   |
 | 🎄 Day 8: Treetop Tree House        | ⭐⭐     | [Day8.py](/python/day8.py)   |
 | 🎄 Day 9: Rope Bridge               | ⭐⭐     | [Day9.py](/python/day9.py)   |
 | 🎄 Day 10: Cathode-Ray Tube         | ⭐⭐     | [Day10.py](/python/day10.py) |
