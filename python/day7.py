@@ -24,5 +24,3 @@ for line in lines:
 
 print(sum(size for size in dirSizes.values() if size <= 100_000))
 print(min(size for size in dirSizes.values() if size >= dirSizes["/"] - 40_000_000))
-
-print(dirSizes["/"] - 40_000_000)
