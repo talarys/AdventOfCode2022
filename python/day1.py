@@ -1,10 +1,10 @@
 input = open("../inputs/day1.txt").readlines()
 
-n, Elves = 1, [0]
+n, Elves = 0, [0]
 
 for line in map(lambda x: x.strip(), input):
     if line:
-        Elves[n - 1] += int(line)
+        Elves[n] += int(line)
     else:
         n, Elves = n + 1, Elves + [0]
 
