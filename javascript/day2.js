@@ -1,25 +1,48 @@
-import fs from 'fs';
+import fs from 'fs'
 
-const lines = fs
+const games = fs
   .readFileSync('../inputs/day2.txt')
   .toString('utf-8')
-  .split('\n');
+  .split('\n')
+  .filter((l) => l)
 
-let part1 = 0;
-let part2 = 0;
+// Part 1
+// ABC XYZ -> ROCK PAPER SCISSOR
 
-for (const line of lines) {
-  if (!line) {
-    break;
-  }
-
-  let [a, b] = line.split(' ');
-  a = Number(a.replace('A', '1').replace('B', '2').replace('C', '3'));
-  b = Number(b.replace('X', '1').replace('Y', '2').replace('Z', '3'));
-
-  part1 += b + ((b - a + 1 + 3) % 3) * 3;
-  part2 += ((a + b) % 3) + 1 + (b - 1) * 3;
+const moveValues = { X: 1, Y: 2, Z: 3 }
+const gameValues = {
+  A: { X: 3, Y: 6, Z: 0 },
+  B: { X: 0, Y: 3, Z: 6 },
+  C: { X: 6, Y: 0, Z: 3 },
 }
 
-console.log(part1);
-console.log(part2);
+const getScoreP1 = (game) => {
+  let [op, you] = game.split(' ')
+  const moveScore = moveValues[you]
+  const gameScore = gameValues[op][you]
+
+  return gameScore + moveScore
+}
+
+// Part 2
+// X Lose | Y Draw | Z Win
+
+const requiredMoves = {
+  A: { X: 'S', Y: 'R', Z: 'P' },
+  B: { X: 'R', Y: 'P', Z: 'S' },
+  C: { X: 'P', Y: 'S', Z: 'R' },
+}
+const actualMoveValues = { R: 1, P: 2, S: 3 }
+const actualGameValues = { X: 0, Y: 3, Z: 6 }
+
+const getScoreP2 = (game) => {
+  let [opMov, outcome] = game.split(' ')
+  const yourMove = requiredMoves[opMov][outcome]
+  return actualGameValues[outcome] + actualMoveValues[yourMove]
+}
+
+const part1 = games.map(getScoreP1).reduce((a, b) => a + b, 0)
+const part2 = games.map(getScoreP2).reduce((a, b) => a + b, 0)
+
+console.log(part1)
+console.log(part2)
