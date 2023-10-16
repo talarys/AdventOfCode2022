@@ -5,13 +5,13 @@ part2 = 0
 
 for line in lines:
     a, b = line.split(",")
-    ao, af = map(int, a.split("-"))
-    bo, bf = map(int, b.split("-"))
+    start1, end1 = map(int, a.split("-"))
+    start2, end2 = map(int, b.split("-"))
 
-    if (ao <= bo and af >= bf) or (bo <= ao and bf >= af):
+    if (start1 <= start2 and end1 >= end2) or (start2 <= start1 and end2 >= end1):
         part1 += 1
 
-    if max(ao, bo) <= min(af, bf):
+    if max(start1, start2) <= min(end1, end2):
         part2 += 1
 
 if __name__ == "__main__":
