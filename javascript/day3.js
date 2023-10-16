@@ -27,12 +27,12 @@ const part1 = rucksacks
 const getGroupOf3 = (arr) =>
   arr.length ? [arr.slice(0, 3), ...getGroupOf3(arr.slice(3))] : []
 
-const findCommonItemGroupOf3 = (group) => {
-  const first = new Set(group[0])
-  const second = new Set(group[1])
-  const third = new Set(group[2])
+const findCommonItemGroupOf3 = ([x, y, z]) => {
+  const a = new Set(x)
+  const b = new Set(y)
+  const c = new Set(z)
 
-  return [...first].find((i) => second.has(i) && third.has(i))
+  return [...a].find((i) => b.has(i) && c.has(i))
 }
 
 const part2 = getGroupOf3(rucksacks)
